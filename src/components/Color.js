@@ -1,20 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
 
  class Color extends Component {
-  //  constructor(props){
-  //    super(props);
-  //      this.state = {
-  //        color: 'black'
-  //      }
-  //    }
 
   render() {
-       return this.props.colors.map((color) =>
-        <h1
-          key={color.id}
-        >Color{color.id}: {color.color}</h1>
-       )
-  }
+       return (
+        <h1>
+         proba
+        </h1>
+       )}
 }
 
-export default Color
+// Color.propTypes = {
+//   colors: PropTypes.array.isRequired
+// }
+export default Color;
