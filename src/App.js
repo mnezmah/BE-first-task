@@ -15,13 +15,21 @@ async componentDidMount() {
     colors: data.data.colors });
 }
 
+changeColor = () => {
+  const black = document.querySelector('.App :nth-child(2)');
+  black.classList.toggle("black");
+  console.log('test');
+}
+
   render() {
+    
     console.log(this.state.colors);
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Color 
+            onClick={this.changeColor}
             colors={this.state.colors}
           />
         </header>
@@ -29,4 +37,6 @@ async componentDidMount() {
     );
   }
 }
+
+
 export default App;
