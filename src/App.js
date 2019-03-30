@@ -6,26 +6,23 @@ import axios from 'axios';
 
 class App extends Component {
   state = {
-    colors:  {}
+    colors: []
   };
 
-componentDidMount() {
-  axios.get('http://www.colr.org/json/colors/random/2')
-  .then(res => this.setState({
-    colors: res.data }));
+async componentDidMount() {
+  const data = await axios.get('http://www.colr.org/json/colors/random/2');
+   this.setState({
+    colors: data.data.colors });
 }
 
-
-
   render() {
-
-    console.log(this.state.colors.colors);
+    console.log(this.state.colors);
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Color 
-            colors={this.state.colors.colors}
+            colors={this.state.colors}
           />
         </header>
       </div>

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+
 
  class Color extends Component {
 
   render() {
-       return (
-        <h1>
-         proba
+       return this.props.colors.map((color) => (
+        <h1
+          key={color.id}
+        >
+          Color{color.id}: {color.hex}
         </h1>
-       )}
+      ))
+  }
 }
 
-// Color.propTypes = {
-//   colors: PropTypes.array.isRequired
-// }
 export default Color;
