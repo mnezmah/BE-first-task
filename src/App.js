@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import Color from './components/Color';
+import Text from './components/Text';
 import './App.css';
 import axios from 'axios';
 
 class App extends Component {
   state = {
-    colors: []
+    colors: [],
+    text: 'title'
   };
 
 async componentDidMount() {
@@ -21,17 +23,20 @@ changeColor = () => {
   console.log('test');
 }
 
+
   render() {
-    
     console.log(this.state.colors);
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo" /><h1 className="title">{this.state.text}</h1>
           <Color 
             onClick={this.changeColor}
             colors={this.state.colors}
           />
+          <Text 
+          input={this.state.text}/>
+          
         </header>
       </div>
     );
