@@ -5,13 +5,14 @@ import React, { Component } from 'react';
 
   render() {
        return this.props.colors.map((color) => (
-        <h1
-          key={color.id}
-        >
-          Color{color.id}: {color.hex}
-        </h1>
+         <div key={color.id}
+         style = {{ background: `#${color.hex}`, height: '20vh', width: '20vh', margin: '2%' }}>
+         </div>
+       
       ))
   }
 }
+
+
 
 export default Color;
