@@ -1,3 +1,16 @@
+## Challenge task for future employee
+This is sinlge page app which fethches colors from [colr.org API](http://www.colr.org/api.html).
+It has two child components that share props with parrent copmonent.
+[Axios](https://www.npmjs.com/package/axios) is used for fetching data from API.
+
+### Instructions
+* clone project
+* open terminal
+* run `npm install` to install dependencies
+* run `npm start` to start the server and app will open automaticaly in the browser.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
