@@ -39,13 +39,11 @@ textChange = (title) => {
             onClick={this.changeColor}
             colors={this.state.colors}
           />
-          <Text textChange={this.textChange}/>
-          
+          <Text textChange={this.textChange}/>      
         </header>
       </div>
     );
   }
 }
-
 
 export default App;
