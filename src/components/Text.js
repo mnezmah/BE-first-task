@@ -20,6 +20,7 @@ import React, { Component } from 'react'
       <form 
         onSubmit={this.onSubmit}>
         <input 
+        className= "text-input"
           type="text" 
           name="title"
           placeholder="your tex here..."
@@ -28,8 +29,9 @@ import React, { Component } from 'react'
         />
 
         <input 
+        className="btn"
         type="submit"
-        value ="Submit"
+        value="Submit"
         />
         </form>
       </div>

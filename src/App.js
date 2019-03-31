@@ -17,9 +17,8 @@ async componentDidMount() {
     colors: data.data.colors });
 }
 
-
 changeColor = () => {
-  const black = document.querySelector('.App :nth-child(2)');
+  const black = document.querySelector('.App :nth-child(3)');
   black.classList.toggle("black");
   console.log('test');
 }
@@ -37,7 +36,7 @@ textChange = (title) => {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="title">{this.state.text}</h1>
           <Color 
-            onSubmit={this.changeColor}
+            onClick={this.changeColor}
             colors={this.state.colors}
           />
           <Text textChange={this.textChange}/>
