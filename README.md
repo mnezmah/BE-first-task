@@ -1,6 +1,6 @@
 ## Challenge task for future employee
 This is sinlge page app which fethches colors from [colr.org API](http://www.colr.org/api.html).
-It has two child components that share props with parrent copmonent.
+It has two child components that share props with parent copmonent.
 [Axios](https://www.npmjs.com/package/axios) is used for fetching data from API.
 
 ### Instructions
