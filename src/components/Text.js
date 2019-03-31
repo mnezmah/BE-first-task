@@ -2,16 +2,17 @@ import React, { Component } from 'react'
 
  class Text extends Component {
    state = {
-     title: ''
+     title : ''
    }
-   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
-
- onSubmit = (e) => {
+  onSubmit = (e) => {
     e.preventDefault();
-   this.setState ({input: this.state.title});
-    console.log(this.state.title);
-    this.setState({ title: ''});
+    this.props.textChange(this.state.title);
+    this.setState({ title: '' });
   };
+
+   onChange = (e) => this.setState({ title: e.target.value });
+
+   
 
   render() {
     return (
@@ -29,7 +30,6 @@ import React, { Component } from 'react'
         <input 
         type="submit"
         value ="Submit"
-        className ="btn"
         />
         </form>
       </div>

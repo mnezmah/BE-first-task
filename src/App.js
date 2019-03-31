@@ -17,25 +17,30 @@ async componentDidMount() {
     colors: data.data.colors });
 }
 
+
 changeColor = () => {
   const black = document.querySelector('.App :nth-child(2)');
   black.classList.toggle("black");
   console.log('test');
 }
 
-
+textChange = (title) => {
+  console.log(title);
+  this.setState({ text: title });
+}
   render() {
     console.log(this.state.colors);
+    
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" /><h1 className="title">{this.state.text}</h1>
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="title">{this.state.text}</h1>
           <Color 
-            onClick={this.changeColor}
+            onSubmit={this.changeColor}
             colors={this.state.colors}
           />
-          <Text 
-          input={this.state.text}/>
+          <Text textChange={this.textChange}/>
           
         </header>
       </div>
